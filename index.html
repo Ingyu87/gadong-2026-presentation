@@ -174,7 +174,36 @@ h1,h2,h3{margin:0;font-family:'Jua','Noto Sans KR','Malgun Gothic',sans-serif;fo
 #juri,#say{visibility:hidden}
 #stage[data-character="on"] #juri,#stage[data-character="on"] #say{visibility:visible}
 .slide.drone.active{opacity:1;transform:none;transition:none}
-#prevSlide{position:absolute;left:28px;bottom:18px;z-index:60;border:0;border-radius:18px;padding:12px 22px;background:#fff;color:#6a5340;font:700 25px sans-serif;cursor:pointer} </style>
+#prevSlide{position:absolute;left:28px;bottom:18px;z-index:60;border:0;border-radius:18px;padding:12px 22px;background:#fff;color:#6a5340;font:700 25px sans-serif;cursor:pointer} 
+/* First-semester recap and next-year parent information */
+#nav button{padding:10px 21px;white-space:nowrap}
+.recap .recap-grid{position:absolute;left:230px;top:290px;width:1460px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.recap figure{margin:0;background:white;border-radius:24px;overflow:hidden;box-shadow:0 10px 26px #56351b20}
+.recap figure img{display:block;width:100%;height:350px;object-fit:cover}
+.recap figcaption{padding:24px 26px;font-size:29px;line-height:1.55}
+.recap figcaption b{display:block;font:40px 'Jua',sans-serif;color:var(--blue);margin-bottom:12px}
+.recap .recap-note{position:absolute;left:240px;top:910px;font-size:30px;color:#66503e}
+.recap-two .recap-grid{grid-template-columns:1fr 1fr 1.25fr;gap:24px}
+.recap-two .mini-stack{display:grid;gap:20px}
+.recap-two .mini-stack figure{display:flex;align-items:center;height:265px}
+.recap-two .mini-stack img{width:48%;height:100%;object-fit:cover}
+.recap-two .mini-stack figcaption{font-size:26px;padding:18px}
+.recap-two .mini-stack b{font-size:32px}
+.recap-two .recap-grid>figure img{height:365px;object-fit:contain;background:#eef5e6}
+.recap-two .recap-grid{grid-template-columns:1.25fr 1fr;}
+.recap-two .recap-grid>figure figcaption{padding:20px 26px}
+.calendar .calendar-body{position:absolute;left:230px;top:280px;width:1460px;display:grid;grid-template-columns:790px 640px;gap:30px}
+.calendar h2{font:40px 'Jua',sans-serif;color:var(--blue);margin-bottom:18px}
+.calendar table{border-collapse:collapse;width:100%;font-size:29px;background:#fff;border-radius:18px;overflow:hidden}
+.calendar td{padding:14px 18px;border-bottom:1px solid #e1d9c9;line-height:1.4}
+.calendar td:first-child{font-weight:700;width:43%;background:#f5f0e5}
+.calendar .works{padding:24px 26px;background:#fff;border:2px solid #e8d2b7;border-radius:22px}
+.calendar .work-year{font-size:31px;color:#a45120;font-weight:900;margin:14px 0 8px}
+.calendar .work-item{font-size:29px;line-height:1.65}
+.calendar .closing-reason{position:absolute;left:230px;top:850px;width:1460px;padding:22px 30px;border-radius:22px;background:#2b4fb5;color:white;font-size:29px;line-height:1.55}
+.calendar .closing-reason strong{display:block;font:40px 'Jua',sans-serif;margin-bottom:4px}
+
+</style>
 </head>
 <body>
 <div id="vp"><div id="stage" data-theme="intro">
@@ -195,6 +224,28 @@ h1,h2,h3{margin:0;font-family:'Jua','Noto Sans KR','Malgun Gothic',sans-serif;fo
     <figure class="ph b st" data-s="0"><div class="fr"><video data-photo="ph006" autoplay muted loop playsinline preload="metadata" aria-label="사진 기반 생성 영상" style="width:100%;height:100%;object-fit:cover;display:block" src="media/69acd0bebea350cdc68b.mp4"></video></div></figure>
     <figure class="ph c st" data-s="0"><div class="fr"><video data-photo="ph008" autoplay muted loop playsinline preload="metadata" aria-label="사진 기반 생성 영상" style="width:100%;height:100%;object-fit:cover;display:block" src="media/9947a4a65955044c67d8.mp4"></video></div></figure>
   </section>
+
+
+<section class="slide recap" data-tab="semester1" data-juri="1670,1080,.2" data-say="">
+ <div class="ttl"><span>1학기 주요 교육활동</span></div>
+ <div class="recap-grid">
+  <figure><img src="media/sem1-arts.png" alt="1학기 학년별 예술교육"><figcaption><b>학년별 예술교육</b>2·4·6학년의<br>예술교육을 운영했습니다.</figcaption></figure>
+  <figure><img src="media/sem1-sports.png" alt="1학기 체육교육 축구 활동"><figcaption><b>학년별 체육교육</b>1·3·5학년이 체육수업에서<br>친구들과 함께 움직이며 배웠습니다.</figcaption></figure>
+  <figure><img src="media/sem1-digital.png" alt="디지털 선도학교 태블릿 활용 수업"><figcaption><b>디지털 선도학교</b>디지털 기기를 활용해<br>수업에 참여했습니다.</figcaption></figure>
+ </div>
+ <p class="recap-note">2026학년도 1학기 교육활동을 사진으로 돌아봅니다.</p>
+</section>
+<section class="slide recap recap-two" data-tab="semester1" data-juri="1670,1080,.2" data-say="">
+ <div class="ttl"><span>책과 자연에서 배우고, 함께 도전했어요</span></div>
+ <div class="recap-grid">
+  <div class="mini-stack">
+   <figure><img src="media/sem1-reading.png" alt="책 읽는 멋진 반 활동"><figcaption><b>독서교육</b>글샘터 행사 주간<br>책 읽는 멋진 반</figcaption></figure>
+   <figure><img src="media/sem1-ecology.png" alt="1·2학년 생태전환교육"><figcaption><b>생태전환교육</b>1·2학년이 참여한<br>자연 속 배움</figcaption></figure>
+  </div>
+  <figure><img src="media/sem1-baseball.png" alt="야구부 전국소년체육대회 우승 기념 사진"><figcaption><b>야구부 전국소년체육대회 우승</b>함께 훈련하고 도전한 선수들에게<br>축하와 응원을 보냅니다.</figcaption></figure>
+ </div>
+ <p class="recap-note">진로탐색 프로그램, 가동 버스킹, 3·4학년 수영 교육도 함께 운영했습니다.</p>
+</section>
 
   <!-- 1. 2학기 한눈에 -->
   <section class="slide ov-s" data-tab="intro" data-juri="1640,1062,.24" data-bub="left" data-say="9월부터 11월까지, 한눈에 볼까요?">
@@ -421,6 +472,31 @@ h1,h2,h3{margin:0;font-family:'Jua','Noto Sans KR','Malgun Gothic',sans-serif;fo
     <div class="sc">서울가동초등학교</div>
   </section>
 
+
+<section class="slide calendar" data-tab="calendar" data-character="off" data-juri="2200,1080,.2" data-say="">
+ <div class="ttl"><span>2027학년도 학사일정·시설공사 안내</span></div>
+ <div class="calendar-body">
+  <div><h2>주요 학사일정</h2><table aria-label="2027학년도 주요 학사일정"><tbody>
+   <tr><td>시업식·입학식</td><td>2027. 3. 2.(화)</td></tr>
+   <tr><td>1학기 자율휴업일</td><td>5. 4.(화)</td></tr>
+   <tr><td>여름방학식</td><td>7. 16.(금)</td></tr>
+   <tr><td>여름방학</td><td>7. 17.~8. 16.</td></tr>
+   <tr><td>개학식</td><td>8. 17.(화)</td></tr>
+   <tr><td>2학기 자율휴업일</td><td>9. 17.(금), 11. 19.(금)</td></tr>
+   <tr><td>종업식·졸업식</td><td><b>2028. 1. 6.(목)</b></td></tr>
+  </tbody></table></div>
+  <div class="works"><h2>시설 개선공사 예정</h2>
+   <div class="work-year">2027년 1~2월</div>
+   <div class="work-item">체육시설 개선공사<br>중앙현관 개선공사</div>
+   <div class="work-year">2028년 1~2월</div>
+   <div class="work-item">급식실 개선공사</div>
+   <div class="work-year">2028년 1~3월</div>
+   <div class="work-item">화장실 개선공사</div>
+  </div>
+ </div>
+ <div class="closing-reason"><strong>시설공사 일정에 따라 2027학년도 종업식·졸업식은 2028년 1월 6일(목)입니다.</strong>급식실·화장실 개선공사 기간을 고려해 학사일정을 운영합니다.</div>
+</section>
+
   <!-- ============ 주리 ============ -->
   <div id="juri"><div id="shadow"></div><div id="jwrap"></div><div id="prop"></div></div>
   <div id="say"></div>
@@ -452,11 +528,11 @@ order.forEach(k=>{const im=new Image();im.src=JURI.img[k];
   if(k==='base'){im.style.left='0';im.style.top='0';}
   else{const q=JURI.meta.parts[k];im.style.left=q.x+'px';im.style.top=q.y+'px';im.style.transformOrigin=(q.px-q.x)+'px '+(q.py-q.y)+'px';im.style.animation=anim[k];}
   jw.appendChild(im);});
-const props={intro:'🍁',grade:'🎵',sep:'🎒',oct:'🍁',nov:'🧣',end:'💌'};
+const props={semester1:'🌱',calendar:'',intro:'🍁',grade:'🎵',sep:'🎒',oct:'🍁',nov:'🧣',end:'💌'};
 /* slides */
 const slides=$$('.slide');
 slides.forEach(s=>{let n=0;s.querySelectorAll('.st').forEach(e=>{if(e.dataset.s){e._k=+e.dataset.s;n=Math.max(n,e._k);}else{e._k=++n;}});s._max=n;});
-const tabs=[['intro','처음'],['grade','학년별 수업'],['sep','9월'],['oct','10월'],['nov','11월'],['end','마무리']];
+const tabs=[['intro','처음'],['semester1','1학기'],['grade','학년별 수업'],['sep','9월'],['oct','10월'],['nov','11월'],['end','마무리'],['calendar','2027 안내']];
 const nav=$('#nav');
 tabs.forEach(([k,l])=>{const b=document.createElement('button');b.textContent=l;b.dataset.tab=k;b.onclick=e=>{e.stopPropagation();b.blur();go(slides.findIndex(s=>s.dataset.tab===k),0);};nav.appendChild(b);});
 let cur=-1,step=0,sayTimer=0;
@@ -485,7 +561,7 @@ function go(i,st,dir){
   const back=dir<0;
   slides.forEach((s,k)=>{s.classList.toggle('active',k===i);s.classList.toggle('back',k<i);});
   cur=i;const s=slides[i];step=st==null?0:st;
-  stage.dataset.character=s.classList.contains("drone")?"off":"on";
+  stage.dataset.character=(s.classList.contains("drone")||s.dataset.character==="off")?"off":"on";
   s.querySelectorAll('.st').forEach(e=>e.classList.toggle('on',e._k<=step));
   stage.dataset.theme=s.dataset.tab;
   $$('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.tab===s.dataset.tab));
