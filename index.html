@@ -174,7 +174,7 @@ h1,h2,h3{margin:0;font-family:'Jua','Noto Sans KR','Malgun Gothic',sans-serif;fo
 #juri,#say{visibility:hidden}
 #stage[data-character="on"] #juri,#stage[data-character="on"] #say{visibility:visible}
 .slide.drone.active{opacity:1;transform:none;transition:none}
-#prevSlide{position:absolute;left:28px;bottom:18px;z-index:60;border:0;border-radius:18px;padding:12px 22px;background:#fff;color:#6a5340;font:700 25px sans-serif;cursor:pointer} 
+#prevSlide{position:absolute;left:28px;bottom:18px;z-index:60;border:0;border-radius:18px;padding:12px 22px;background:#fff;color:#6a5340;font:700 25px sans-serif;cursor:pointer}
 /* First-semester recap and next-year parent information */
 #nav button{padding:10px 21px;white-space:nowrap}
 .recap .recap-grid{position:absolute;left:230px;top:290px;width:1460px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
@@ -454,24 +454,10 @@ h1,h2,h3{margin:0;font-family:'Jua','Noto Sans KR','Malgun Gothic',sans-serif;fo
     </div>
   </section>
 
-  <!-- 마무리 -->
-  <section class="slide poem-s" data-tab="end" data-juri="1620,1062,.27" data-bub="left" data-say="함께 흔들리며 함께 자라요.">
-    <div class="ttl"><span>우리 함께, 숲이 되어요</span><i class="d"></i><i class="m"></i></div>
-    <div class="poem" style="top:300px">
-      <p class="st" data-s="1">나무 하나가 흔들리면 나무 둘도 흔들린다.</p>
-      <p class="st" data-s="2">나무 둘이 흔들리면 나무 셋도 흔들린다.</p>
-      <p class="st" data-s="3">이렇게 이렇게</p>
-      <p class="st hl" data-s="4">나무 하나의 꿈은 나무 둘의 꿈,<br>나무 둘의 꿈은 나무 셋의 꿈</p>
-      <div class="by st" data-s="5">― 숲, 강은교</div>
-    </div>
+  <!-- 12월 예정 활동: 추후 제공 자료 반영 -->
+  <section class="slide" data-tab="dec" data-juri="2200,1080,.2" data-character="off" data-say="">
+    <div class="ttl"><span>12월 예정 교육활동</span></div>
   </section>
-
-  <section class="slide th" data-tab="end" data-juri="960,1088,.46" data-bub="right" data-say="">
-    <h1>감사합니다</h1>
-    <div class="en">THANK YOU</div>
-    <div class="sc">서울가동초등학교</div>
-  </section>
-
 
 <section class="slide calendar" data-tab="calendar" data-character="off" data-juri="2200,1080,.2" data-say="">
  <div class="ttl"><span>2027학년도 학사일정·시설공사 안내</span></div>
@@ -496,6 +482,24 @@ h1,h2,h3{margin:0;font-family:'Jua','Noto Sans KR','Malgun Gothic',sans-serif;fo
  </div>
  <div class="closing-reason"><strong>시설공사 일정에 따라 2027학년도 종업식·졸업식은 2028년 1월 6일(목)입니다.</strong>급식실·화장실 개선공사 기간을 고려해 학사일정을 운영합니다.</div>
 </section>
+
+<!-- 마무리 -->
+  <section class="slide poem-s" data-tab="end" data-juri="1620,1062,.27" data-bub="left" data-say="함께 흔들리며 함께 자라요.">
+    <div class="ttl"><span>우리 함께, 숲이 되어요</span><i class="d"></i><i class="m"></i></div>
+    <div class="poem" style="top:300px">
+      <p class="st" data-s="1">나무 하나가 흔들리면 나무 둘도 흔들린다.</p>
+      <p class="st" data-s="2">나무 둘이 흔들리면 나무 셋도 흔들린다.</p>
+      <p class="st" data-s="3">이렇게 이렇게</p>
+      <p class="st hl" data-s="4">나무 하나의 꿈은 나무 둘의 꿈,<br>나무 둘의 꿈은 나무 셋의 꿈</p>
+      <div class="by st" data-s="5">― 숲, 강은교</div>
+    </div>
+  </section>
+
+  <section class="slide th" data-tab="end" data-juri="960,1088,.46" data-bub="right" data-say="">
+    <h1>감사합니다</h1>
+    <div class="en">THANK YOU</div>
+    <div class="sc">서울가동초등학교</div>
+  </section>
 
   <!-- ============ 주리 ============ -->
   <div id="juri"><div id="shadow"></div><div id="jwrap"></div><div id="prop"></div></div>
@@ -532,7 +536,7 @@ const props={semester1:'🌱',calendar:'',intro:'🍁',grade:'🎵',sep:'🎒',o
 /* slides */
 const slides=$$('.slide');
 slides.forEach(s=>{let n=0;s.querySelectorAll('.st').forEach(e=>{if(e.dataset.s){e._k=+e.dataset.s;n=Math.max(n,e._k);}else{e._k=++n;}});s._max=n;});
-const tabs=[['intro','처음'],['semester1','1학기'],['grade','학년별 수업'],['sep','9월'],['oct','10월'],['nov','11월'],['end','마무리'],['calendar','2027 안내']];
+const tabs=[['intro','처음'],['semester1','1학기'],['grade','학년별 수업'],['sep','9월'],['oct','10월'],['nov','11월'],['dec','12월'],['calendar','2027 안내'],['end','마무리']];
 const nav=$('#nav');
 tabs.forEach(([k,l])=>{const b=document.createElement('button');b.textContent=l;b.dataset.tab=k;b.onclick=e=>{e.stopPropagation();b.blur();go(slides.findIndex(s=>s.dataset.tab===k),0);};nav.appendChild(b);});
 let cur=-1,step=0,sayTimer=0;
